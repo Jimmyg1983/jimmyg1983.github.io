@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>James Gamache — IT & Cybersecurity</title>
+<meta name="theme-color" content="#111D2F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="James Gamache | IT & Cybersecurity Portfolio">
+<meta property="og:description" content="Hands-on Python, networking, Windows security and project management projects.">
+<meta property="og:url" content="https://jimmyg1983.github.io/">
+<link rel="canonical" href="https://jimmyg1983.github.io/">
 <meta name="description" content="James Gamache — 20 years building in the physical world, now building and securing in the digital one. Open to SOC, Help Desk, IT Support, and internship roles.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +22,12 @@
     --card:#ffffff;
   }
   *{box-sizing:border-box}
+  .skip-link{position:absolute;top:-80px;left:16px;background:#fff;color:#111d2f;padding:10px 16px;z-index:20;border-radius:8px}
+  .skip-link:focus{top:12px}
+  .project-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+  .project-links a{font-weight:600;text-decoration:underline;text-underline-offset:3px}
+  .skillcard p{margin:.6em 0 0}
+  .skillcard a{text-decoration:underline;text-underline-offset:3px}
   html{scroll-behavior:smooth}
   :focus-visible{outline:3px solid #e4a645;outline-offset:3px}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -121,6 +133,7 @@
 </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="hero">
     <span class="corner c-tl"></span>
     <span class="corner c-br"></span>
@@ -131,9 +144,10 @@
           <div class="who">James Gamache</div>
           <div class="tag">IT • Cybersecurity • PM</div>
         </div>
-        <nav>
+        <nav aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#work">Work</a>
+          <a href="#approach">Approach</a>
           <a href="#skills">Skills</a>
           <a href="#education">Education</a>
           <a href="#contact">Contact</a>
@@ -151,6 +165,7 @@
     </div>
   </header>
 
+  <main id="main-content">
   <section id="about" class="about">
     <div class="wrap">
       <h2>About</h2>
@@ -163,6 +178,7 @@
   <section id="work">
     <div class="wrap">
       <h2>Featured Projects</h2>
+      <p>Selected work that shows how I learn, build, test, and document practical tools.</p>
       <div class="project">
         <div class="bar"><span class="dot g"></span><span class="dot"></span><span class="dot"></span></div>
         <div class="body">
@@ -183,14 +199,27 @@
       <div class="skills" style="margin-top:22px">
         <article class="skillcard">
           <h3>Network Port Checker</h3>
+          <p><strong>Python · TCP/IP · Unit testing</strong></p>
           <p>A Python TCP connectivity checker restricted to localhost. Demonstrates socket programming, connection timeouts, and responsible network testing.</p>
           <p><a href="https://github.com/Jimmyg1983/network-port-checker">View source, documentation, and automated tests</a></p>
         </article>
         <article class="skillcard">
           <h3>Windows Security Audit</h3>
+          <p><strong>Python · PowerShell · Windows security</strong></p>
           <p>A read-only Python and PowerShell utility for reviewing firewall profiles, Defender status, UAC, and BitLocker configuration. Reports are stored locally.</p>
           <p><a href="https://github.com/Jimmyg1983/Jimmyg1983/tree/main/projects/windows-security-audit">View source, documentation, and automated tests</a></p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <h2>How I work</h2>
+      <div class="skills">
+        <div class="skillcard"><h3>Understand the problem</h3><p>Start with the user, the system, and what a useful outcome looks like.</p></div>
+        <div class="skillcard"><h3>Build responsibly</h3><p>Favor small, readable tools, safe defaults, and clearly defined scope.</p></div>
+        <div class="skillcard"><h3>Test and improve</h3><p>Document limitations, use automated tests where practical, and iterate from results.</p></div>
       </div>
     </div>
   </section>
@@ -265,6 +294,7 @@
     </div>
   </section>
 
+  </main>
   <footer>© 2026 James Gamache · Built &amp; secured by hand.</footer>
 </body>
 </html>
