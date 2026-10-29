@@ -17,6 +17,8 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
+  :focus-visible{outline:3px solid #e4a645;outline-offset:3px}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   body{
     margin:0; background:var(--paper); color:var(--ink);
     font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
@@ -160,7 +162,7 @@
 
   <section id="work">
     <div class="wrap">
-      <h2>Featured Project</h2>
+      <h2>Featured Projects</h2>
       <div class="project">
         <div class="bar"><span class="dot g"></span><span class="dot"></span><span class="dot"></span></div>
         <div class="body">
@@ -177,6 +179,18 @@
             <a class="btn primary" href="https://agent.meta.ai/s/sitesync-demo-page-vxd59xowoxnxo7r" target="_blank" rel="noopener">Open the live demo →</a>
           </div>
         </div>
+      </div>
+      <div class="skills" style="margin-top:22px">
+        <article class="skillcard">
+          <h3>Network Port Checker</h3>
+          <p>A Python TCP connectivity checker restricted to localhost. Demonstrates socket programming, connection timeouts, and responsible network testing.</p>
+          <p><a href="https://github.com/Jimmyg1983/network-port-checker">View source, documentation, and automated tests</a></p>
+        </article>
+        <article class="skillcard">
+          <h3>Windows Security Audit</h3>
+          <p>A read-only Python and PowerShell utility for reviewing firewall profiles, Defender status, UAC, and BitLocker configuration. Reports are stored locally.</p>
+          <p><a href="https://github.com/Jimmyg1983/Jimmyg1983/tree/main/projects/windows-security-audit">View source, documentation, and automated tests</a></p>
+        </article>
       </div>
     </div>
   </section>
